@@ -1,0 +1,38 @@
+
+import java.io.*;
+import java.util.*;
+
+
+ // } Driver Code Ends
+//User function Template for Java
+
+class Solution
+{
+    //Function to swap odd and even bits.
+    public static int swapBits(int n) 
+    {
+        int even_bits = n & 0xAAAAAAAA;
+        int odd_bits = n & 0x55555555;
+        even_bits >>= 1;
+        odd_bits <<= 1;
+        return (even_bits | odd_bits);
+	}
+    
+}
+
+// { Driver Code Starts.
+
+class BitWise{
+
+	public static void main (String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int t = sc.nextInt();//testcases
+		while(t-->0){
+		    int n = sc.nextInt();//taking n
+		    
+		    Solution obj = new Solution();
+		  
+		    System.out.println(obj.swapBits(n));
+		}
+	}
+}  
